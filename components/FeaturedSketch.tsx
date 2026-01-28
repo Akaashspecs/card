@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export default function FeaturedSketch() {
     return (
-        <section className="w-full min-h-screen bg-stone-50 flex items-center justify-center p-4 overflow-hidden relative">
+        <section className="w-full min-h-screen bg-linear-to-b from-stone-50 via-stone-50 via-85% to-neutral-800 flex items-center justify-center p-4 overflow-hidden relative">
             <div className="max-w-4xl w-full flex flex-col items-center">
 
 
