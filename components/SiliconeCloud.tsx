@@ -26,17 +26,24 @@ import Image from "next/image";
                     but as you knoww mera khaali dimaaaaaag🤦🏻‍♂️,<br/> iske lie bhi soch mei padh gya😭😭😭😭,<br/>
                     bhuat sochne ke baad i just realise tumhe ye cloud jaisa bhondu dena chahiye😅, <br/>
                     As next month se tumhari nayi job start hone wali hai,<br/> i don't want tum idhar bhi manager ko sunado😅,<br/>
-                    agr idhar manager prr guusa aaya to,<br/> 
-                    iss  bhondu prr saari bhadaas nikal lena😅 ye sab seh lega, <br/>
-                    aur kabhi andhere se darr lage to iski roshni jala krr so jaana❤️❤️,
+                    agr idhar manager prr guusa aa bhi jaye to,<br/> 
+                    iss  bhondu prr saara gussa nikal lena😅 ye sab seh lega, <br/>
+                    aur kabhi raat mei andhere se darr lage to iski roshni jala krr so jaana❤️❤️,
                     
 <br/><br/>Neha i really gonna miss you so much every single day ❤️❤️, <br/> 
 gonna miss tumhari pyaari awaaz, <br/> tumhari hasi😄, <br/> tumhara gussa😡, <br/> tumhara attitude😏, <br/> tumhare saath har ek pal❤️❤️,<br/>
-can't wait to see you soon ❤️❤️, <br/>Delhi mei jaakr agar tu mujhe bhoolii to teri khair nai 😤❤️,
-
+can't wait to see you soon ❤️❤️, 
 
                 </div>
-                <div className="font-[family-name:var(--font-cursive)]  text-md text-amber-200">'♡'-Ɲ𓍯𓂃...𓆝 𓆟 𓆞 𓆝 𓆟ᦠ...𓍯𓂃...♡𓆝☃︎𖧧</div>
+                <div className="font-[family-name:var(--font-cursive)] w-full flex flex-col mt-5 items-end text-3xl text-amber-200">
+                    <div>
+                       Ba Bye,
+                    </div>
+                    <div>
+                        Tera Heroo😎
+                    </div>
+                </div>
+                <div className="mx-auto w-fit font-[family-name:var(--font-cursive)]  py-10 text-md text-amber-200">'♡'-Ɲ𓍯𓂃...𓆝 𓆟 𓆞 𓆝 𓆟ᦠ...𓍯𓂃...♡𓆝☃︎𖧧</div>
             </div> 
          
         </div>

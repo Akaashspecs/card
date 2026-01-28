@@ -3,10 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export default function FeaturedSketch() {
+    const [focusedCard, setFocusedCard] = useState<number | null>(null);
+
     return (
-        <section className="w-full min-h-screen bg-linear-to-b from-stone-50 via-stone-50 via-85% to-neutral-800 flex items-center justify-center p-4 overflow-hidden relative">
+        <section className="w-full min-h-screen bg-linear-to-b from-stone-50 via-stone-50 via-65% to-neutral-800 flex items-center justify-center p-4 overflow-hidden relative">
             <div className="max-w-4xl w-full flex flex-col items-center pt-10">
 
 
@@ -18,109 +21,116 @@ export default function FeaturedSketch() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col items-center text-center mb-12"
                 >
-                    <h2 className="font-[family-name:var(--font-cursive)] text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
+                    <h2 className="font-(family-name:--font-cursive) text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
 Togetherness                    </h2>
- <h2 className="font-[family-name:var(--font-cursive)] text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
+ <h2 className="font-(family-name:--font-cursive) text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
 &                    </h2>
- <h2 className="font-[family-name:var(--font-cursive)] text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
+ <h2 className="font-(family-name:--font-cursive) text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
 Forever❤️              </h2>
                     <p className="text-stone-500 max-w-lg mx-auto font-light text-lg">
-                       Cheers to every moment we spent together 
+                       Cheers to every moment we spent together ✨
                     </p>
                 </motion.div>
+
+                {/* Main Feature: Sketch 6 (Restored) */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                     whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                     viewport={{ once: true, margin: "-10%" }}
                     transition={{ duration: 1, ease: [0.17, 0.55, 0.55, 1], delay: 0.2 }}
-
+                    className="mb-20"
                 >
-                    {/* Matte board effect */}
-
-
-
                     <Image
                         src="/photo/sketch6.png"
                         alt="Featured Sketch"
-
                         height={700}
                         width={700}
-                        className="object-fill"
+                        className="object-fill rounded-sm "
                     />
-
-
-                    {/* Signature */}
-
                 </motion.div>
 
 
-                {/* Sketch 1 - Newspaper Layout Section */}
-                <div className="flex flex-col gap-8 w-full max-w-4xl my-12 border-t border-b border-stone-200 py-12">
-
-                    {/* Upper Row: Text Left | Image Right */}
-                    <div className="flex flex-col md:flex-row gap-8 items-start">
-                        {/* Text Column */}
-                        <div className="flex-1 flex flex-col gap-4">
-                            <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">Exhibit A</span>
-                            <h3 className="font-serif text-4xl font-bold text-stone-800 leading-tight">
-                                The Genesis of Form
-                            </h3>
-                            <p className="text-stone-600 font-serif text-lg leading-relaxed">
-                                Before the final masterpiece, there was this—the first breath of inspiration captured on paper.
-                                Notice the raw, unrefined lines that map out the initial energy of the subject.
-                                It is here that the artist's intent is most visible, stripped of all pretension.
-                            </p>
+                {/* Floating Cards Section for Sketch 1, 2, 3 */}
+                <div className="mt-10 font-(family-name:--font-geist-sans) text-stone-500 text-sm tracking-widest uppercase opacity-70">Click on an image to view</div>
+                <div className="w-full max-w-6xl  relative min-h-[600px] flex items-center justify-center">
+                    
+                    {/* Card 1 */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: -100, rotate: -10 }}
+                        whileInView={{ opacity: 1, x: 0, rotate: -6 }}
+                        whileHover={{ scale: 1.1, rotate: 0, zIndex: 10 }}
+                        animate={focusedCard === 1 ? { scale: 1, rotate: 0, zIndex: 50, x: 0 } : undefined}
+                        onClick={() => setFocusedCard(focusedCard === 1 ? null : 1)}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4 }}
+                        className="absolute left-4 md:left-20 top-10 bg-white p-4 pb-12 shadow-2xl rounded-sm transform origin-bottom-left w-[280px] md:w-[320px] cursor-pointer"
+                    >
+                        <div className="relative aspect-3/4 w-full overflow-hidden bg-stone-100">
+                             <Image
+                                src="/photo/sketch1.png"
+                                alt="Sketch 1"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
-
-                        {/* Image Column */}
-                        <div className="w-full md:w-5/12 relative group">
-                            <div className="relative aspect-[3/4] w-full bg-stone-100 p-2 shadow-sm rotate-1 transition-transform duration-500 group-hover:rotate-0">
-                                <Image
-                                    src="/photo/sketch1.png"
-                                    alt="First Draft Sketch"
-                                    fill
-                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                                />
-                                <div className="absolute bottom-2 right-2 text-[10px] font-mono text-stone-400">REF: SK-01</div>
-                            </div>
+                        <div className="mt-4 font-(family-name:--font-cursive) text-center text-stone-600 text-xl rotate-1">
+                            First spark ✨
                         </div>
-                    </div>
+                    </motion.div>
 
-                    {/* Lower Row: Multi-column Text */}
-                    <div className="w-full">
-                        <div className="columns-1 md:columns-2 gap-8 text-stone-500 font-light text-justify text-sm leading-6 border-t border-stone-100 pt-6">
-                            <p className="mb-4 first-letter:float-left first-letter:text-3xl first-letter:font-bold first-letter:mr-2 first-letter:text-stone-800">
-                                This particular piece was found in the archives, dating back to the early conceptual phase.
-                                The texture of the paper suggests a hasty capture of a fleeting moment, perhaps drawn in a
-                                bustling café or a quiet park bench. The shadows are heavy, indicating a strong light source
-                                from the upper right, a technique the artist would later refine.
-                            </p>
-                            <p>
-                                Critics often overlook these preliminary works, yet they hold the key to understanding the
-                                evolution of the style. Note the hesitation in the curvature—a search for the perfect line
-                                that would eventually define the collection. It stands as a humble yet powerful beginning
-                                to what would become a celebrated series.
-                            </p>
+                    {/* Card 2 (Sketch 2) */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0, rotate: 3 }}
+                        whileHover={{ scale: 1.1, rotate: 0, zIndex: 10 }}
+                        animate={focusedCard === 2 ? { scale: 1, rotate: 0, zIndex: 50, y: 0 } : undefined}
+                        onClick={() => setFocusedCard(focusedCard === 2 ? null : 2)}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4 }}
+                        className="relative z-10 bg-white p-4 pb-12 shadow-2xl rounded-sm w-[300px] md:w-[350px] cursor-pointer"
+                    >
+                        <div className="relative aspect-3/4 w-full overflow-hidden bg-stone-100">
+                             <Image
+                                src="/photo/sketch2.png"
+                                alt="Sketch 2"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
-                    </div>
+                        <div className="mt-4 font-(family-name:--font-cursive) text-center text-stone-600 text-2xl">
+                            Moments ❤️ 
+                        </div>
+                    </motion.div>
+
+                    {/* Card 3 */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: 100, rotate: 8 }}
+                        whileInView={{ opacity: 1, x: 0, rotate: 6 }}
+                        whileHover={{ scale: 1.1, rotate: 0, zIndex: 10 }}
+                        animate={focusedCard === 3 ? { scale: 1, rotate: 0, zIndex: 50, x: 0 } : undefined}
+                        onClick={() => setFocusedCard(focusedCard === 3 ? null : 3)}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4 }}
+                        className="absolute right-4 md:right-20 bottom-10 bg-white p-4 pb-12 shadow-2xl rounded-sm transform origin-bottom-right w-[280px] md:w-[320px] cursor-pointer"
+                    >
+                        <div className="relative aspect-3/4 w-full overflow-hidden bg-stone-100">
+                             <Image
+                                src="/photo/sketch3.png"
+                                alt="Sketch 3"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="mt-4 font-(family-name:--font-cursive) text-center text-stone-600 text-xl -rotate-1">
+                            Memories 🌸
+                        </div>
+                    </motion.div>
+                  
 
                 </div>
-                <Image
-                    src="/photo/sketch2.png"
-                    alt="Featured Sketch"
-
-                    height={500}
-                    width={500}
-                    className="object-fill rounded-2xl"
-                />
-                <Image
-                    src="/photo/sketch3.png"
-                    alt="Featured Sketch"
-
-                    height={500}
-                    width={500}
-                    className="object-fill rounded-2xl"
-                />
+               <div className="font-[family-name:var(--font-cursive)] text-3xl text-red-500 drop-shadow-[0_0_8px_rgba(245,39,235,0.5)]">
+  "The kind that lives in shared silence, simple smiles, and ordinary moments that somehow become unforgettable.❤️"
+</div>
             </div>
         </section>
     );

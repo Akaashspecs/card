@@ -6,11 +6,12 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const photos = [
-      "/our/photo2.jpeg",
+       "/our/photo10.jpeg",
+   
     "/our/photo1.jpeg",
     "/our/photo11.jpeg",
   
-    "/our/photo10.jpeg",
+ 
 "/our/photo3.jpeg",
 "/our/photo4.jpeg",
 
@@ -20,7 +21,7 @@ const photos = [
 "/our/photo5.jpeg",
 "/our/photo9.jpeg",
 
-
+   "/our/photo2.jpeg",
 "/our/photo12.jpeg",
  
 ];
@@ -84,7 +85,7 @@ export default function SketchCards() {
                  
                  <div className="text-center mt-2">
                     <p className="font-[family-name:var(--font-cursive)] text-2xl text-pink-500 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]">
-                        Scroll to explore
+                        Scroll left to explore
                     </p>
                  </div>
             </div>
