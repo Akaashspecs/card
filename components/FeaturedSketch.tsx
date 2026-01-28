@@ -7,10 +7,27 @@ import { cn } from "@/lib/utils";
 export default function FeaturedSketch() {
     return (
         <section className="w-full min-h-screen bg-linear-to-b from-stone-50 via-stone-50 via-85% to-neutral-800 flex items-center justify-center p-4 overflow-hidden relative">
-            <div className="max-w-4xl w-full flex flex-col items-center">
+            <div className="max-w-4xl w-full flex flex-col items-center pt-10">
 
 
 
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-20%" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col items-center text-center mb-12"
+                >
+                    <h2 className="font-[family-name:var(--font-cursive)] text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
+Togetherness                    </h2>
+ <h2 className="font-[family-name:var(--font-cursive)] text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
+&                    </h2>
+ <h2 className="font-[family-name:var(--font-cursive)] text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
+Forever❤️              </h2>
+                    <p className="text-stone-500 max-w-lg mx-auto font-light text-lg">
+                       Cheers to every moment we spent together 
+                    </p>
+                </motion.div>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                     whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -36,20 +53,6 @@ export default function FeaturedSketch() {
 
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-20%" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex flex-col items-center text-center mb-12"
-                >
-                    <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4 tracking-tight">
-                        The Masterpiece
-                    </h2>
-                    <p className="text-stone-500 max-w-lg mx-auto font-light text-lg">
-                        A closer look at the details that matter.
-                    </p>
-                </motion.div>
 
                 {/* Sketch 1 - Newspaper Layout Section */}
                 <div className="flex flex-col gap-8 w-full max-w-4xl my-12 border-t border-b border-stone-200 py-12">

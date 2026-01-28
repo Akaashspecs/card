@@ -6,15 +6,23 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const photos = [
-    "/photo/sketch1.png",
-    "/photo/sketch2.png",
-    "/photo/sketch3.png",
-    "/photo/sketch1.png",
-    "/photo/sketch2.png",
-    "/photo/sketch3.png",
-    "/photo/sketch1.png",
-    "/photo/sketch2.png",
-    "/photo/sketch3.png",
+      "/our/photo2.jpeg",
+    "/our/photo1.jpeg",
+    "/our/photo11.jpeg",
+  
+    "/our/photo10.jpeg",
+"/our/photo3.jpeg",
+"/our/photo4.jpeg",
+
+"/our/photo6.jpeg",
+
+"/our/photo8.jpeg",
+"/our/photo5.jpeg",
+"/our/photo9.jpeg",
+
+
+"/our/photo12.jpeg",
+ 
 ];
 
 export default function SketchCards() {
